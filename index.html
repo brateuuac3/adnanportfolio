@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="bs">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -97,6 +97,8 @@ body::after{
         inset 0 1px 0 rgba(255,255,255,.1);
 
     text-align:center;
+
+    animation:cardFloat 5s ease-in-out infinite;
 }
 
 .profile{
@@ -111,6 +113,8 @@ body::after{
     border:3px solid rgba(255,255,255,.25);
 
     box-shadow:0 0 35px rgba(139,92,246,.6);
+
+    animation:pulse 4s ease-in-out infinite;
 }
 
 .profile img{
@@ -130,6 +134,7 @@ h1{
     color:#cfcfcf;
     font-size:.95rem;
     margin-bottom:22px;
+    line-height:1.5;
 }
 
 .links{
@@ -197,6 +202,40 @@ h1{
     letter-spacing:.5px;
 }
 
+@keyframes pulse{
+
+    0%{
+        box-shadow:
+        0 0 20px rgba(139,92,246,.4),
+        0 0 40px rgba(139,92,246,.2);
+    }
+
+    50%{
+        box-shadow:
+        0 0 40px rgba(139,92,246,.8),
+        0 0 80px rgba(139,92,246,.4);
+    }
+
+    100%{
+        box-shadow:
+        0 0 20px rgba(139,92,246,.4),
+        0 0 40px rgba(139,92,246,.2);
+    }
+
+}
+
+@keyframes cardFloat{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+
 @media(max-width:500px){
 
     .card{
@@ -233,10 +272,16 @@ h1{
     <h1>Adnan Solak</h1>
 
     <div class="subtitle">
-        🎤 Sänger • Live Musik • Events
+        🎤 Svadbe • Rođendani • Privatne proslave • Klubovi • Live nastupi
     </div>
 
     <div class="links">
+
+        <a class="link-btn phone"
+           href="tel:+491704570006">
+            <i class="fa-solid fa-phone"></i>
+            Rezervacije i upiti
+        </a>
 
         <a class="link-btn instagram"
            href="https://www.instagram.com/adnan.solak.official/"
@@ -264,12 +309,6 @@ h1{
            target="_blank">
             <i class="fa-brands fa-facebook-f"></i>
             Facebook
-        </a>
-
-        <a class="link-btn phone"
-           href="tel:+491704570006">
-            <i class="fa-solid fa-phone"></i>
-            Booking & Anfragen
         </a>
 
     </div>
