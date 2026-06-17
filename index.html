@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Adnan Solak | Official</title>
 
@@ -31,24 +31,31 @@ gtag('config', 'G-MXXGHRKZSZ');
     font-family:'Poppins',sans-serif;
 }
 
+html,
 body{
-    min-height:100vh;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
     display:flex;
     justify-content:center;
     align-items:center;
+
     background:
         radial-gradient(circle at top left,#8b5cf6 0%,transparent 35%),
         radial-gradient(circle at bottom right,#2563eb 0%,transparent 35%),
         #08090f;
-    overflow:hidden;
+
     position:relative;
 }
 
 body::before{
     content:"";
     position:absolute;
-    width:600px;
-    height:600px;
+    width:500px;
+    height:500px;
     background:#8b5cf6;
     filter:blur(180px);
     opacity:.25;
@@ -59,8 +66,8 @@ body::before{
 body::after{
     content:"";
     position:absolute;
-    width:600px;
-    height:600px;
+    width:500px;
+    height:500px;
     background:#2563eb;
     filter:blur(180px);
     opacity:.25;
@@ -71,20 +78,23 @@ body::after{
 .card{
     position:relative;
     z-index:2;
-    width:95%;
-    max-width:520px;
-    padding:35px;
-    border-radius:30px;
+
+    width:92%;
+    max-width:500px;
+
+    padding:28px;
 
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
 
-    border:1px solid rgba(255,255,255,.15);
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.12);
 
     box-shadow:
         0 20px 60px rgba(0,0,0,.45),
-        inset 0 1px 0 rgba(255,255,255,.15);
+        inset 0 1px 0 rgba(255,255,255,.1);
 
     text-align:center;
 }
@@ -92,8 +102,8 @@ body::after{
 .profile{
     width:150px;
     height:150px;
-    margin:auto;
-    margin-bottom:20px;
+
+    margin:0 auto 18px;
 
     border-radius:50%;
     overflow:hidden;
@@ -117,31 +127,35 @@ body::after{
 h1{
     color:white;
     font-size:2rem;
-    margin-bottom:5px;
+    margin-bottom:6px;
 }
 
 .subtitle{
     color:#d1d5db;
-    margin-bottom:10px;
+    font-size:.95rem;
+    margin-bottom:12px;
 }
 
 .description{
     color:#9ca3af;
-    line-height:1.6;
-    margin-bottom:30px;
+    line-height:1.5;
+    margin-bottom:24px;
+    font-size:.92rem;
 }
 
 .links{
     display:flex;
     flex-direction:column;
-    gap:14px;
+    gap:12px;
 }
 
 .link-btn{
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     gap:12px;
+
+    width:100%;
 
     padding:16px;
 
@@ -163,16 +177,11 @@ h1{
 }
 
 .link-btn:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
 
 .instagram:hover{
-    background:linear-gradient(
-        45deg,
-        #833ab4,
-        #fd1d1d,
-        #fcb045
-    );
+    background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
 }
 
 .tiktok:hover{
@@ -188,26 +197,30 @@ h1{
 }
 
 .footer{
-    margin-top:25px;
-    color:#6b7280;
+    margin-top:20px;
+    color:#9ca3af;
     font-size:.85rem;
 }
 
-@media(max-width:550px){
+@media(max-width:500px){
 
-.card{
-    padding:25px;
-}
+    .card{
+        width:94%;
+        padding:24px;
+    }
 
-.profile{
-    width:130px;
-    height:130px;
-}
+    .profile{
+        width:130px;
+        height:130px;
+    }
 
-h1{
-    font-size:1.7rem;
-}
+    h1{
+        font-size:1.8rem;
+    }
 
+    .link-btn{
+        padding:15px;
+    }
 }
 
 </style>
@@ -229,8 +242,7 @@ h1{
     </div>
 
     <div class="description">
-        Live Musik für Hochzeiten, Geburtstage,
-        Firmenfeiern und besondere Anlässe.
+        Offizielle Links zu meinen sozialen Netzwerken.
     </div>
 
     <div class="links">
@@ -266,7 +278,7 @@ h1{
     </div>
 
     <div class="footer">
-        © Adnan Solak Official
+        🎤 Adnan Solak Official
     </div>
 
 </div>
