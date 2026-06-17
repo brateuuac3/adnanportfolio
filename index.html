@@ -310,99 +310,67 @@ h1{
   text-transform:uppercase;
 }
 
-.gallery-title{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:14px;
-  margin:35px 0 18px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-size:1.08rem;
-}
-
-.gallery-title i{
-  color:var(--gold);
-}
-
-.instagram-posts{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.insta-card{
-  min-height:156px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  gap:8px;
-  padding:16px;
-  border-radius:11px;
-  color:#fff;
-  text-decoration:none;
-  border:1px solid rgba(217,184,120,.22);
-  background:
-    linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.78)),
-    url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/586538326_3973863399412885_7061474985701962659_n.jpg?stp=dst-jpg_tt6&cstp=mx1439x1447&ctp=s1439x1447&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WjhQ0R_A068Q7kNvwEpiAcI&_nc_oc=AdpxZW2qKpqQ1_4xWyU4XdLSN188VmN7wMFUCMeVBicVNTF5ZJ04JpjUDBjjQxHmkYw&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=H1vjq0sBIffCQAVS8o_MvQ&_nc_ss=7b2a8&oh=00_Af-lwCtICyNSu1IEP8p_LFxJbdTd28y_7oxgTNhujiDZvQ&oe=6A38A2EB');
-  background-size:cover;
-  transition:.25s ease;
-}
-
-.insta-card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(243,213,154,.75);
-}
-
-.insta-card strong{
-  color:var(--gold-light);
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.insta-card span{
-  color:#eee;
-  font-size:.92rem;
-}
-
-.insta-card:nth-child(1){background-position:left center;}
-.insta-card:nth-child(2){background-position:center top;}
-.insta-card:nth-child(3){background-position:right center;}
-
 .info{
+  margin-top:34px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  border-radius:20px;
-  border:1px solid var(--line);
-  background:rgba(7,8,10,.78);
-  overflow:hidden;
+  gap:14px;
+  border-radius:0;
+  border:0;
+  background:transparent;
+  overflow:visible;
 }
 
 .info-box{
-  min-height:174px;
+  min-height:152px;
   display:flex;
   flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  text-align:center;
+  justify-content:flex-start;
+  gap:9px;
   padding:22px;
+  text-decoration:none;
+  color:#fff;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:rgba(7,8,10,.78);
+  box-shadow:0 18px 48px rgba(0,0,0,.34);
+}
+
+.info-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--gold-light);
   text-transform:uppercase;
-  border-right:1px solid rgba(217,184,120,.24);
+  letter-spacing:1px;
+  font-weight:800;
 }
 
-.info-box:last-child{
-  border-right:0;
-}
-
-.info-box i{
+.info-head i{
   color:var(--gold);
-  font-size:2.6rem;
-  margin-bottom:9px;
+  font-size:1.45rem;
+}
+
+.info-box p{
+  color:#e8e8e8;
+  line-height:1.65;
+  font-size:.98rem;
 }
 
 .info-box strong{
   color:var(--gold-light);
+  font-weight:800;
+}
+
+.info-action{
+  margin-top:auto;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--gold-light);
+  font-size:.92rem;
+  font-weight:800;
+  text-transform:uppercase;
   letter-spacing:1px;
 }
 
@@ -457,32 +425,32 @@ footer{
   }
 
   .wrap{
-    padding:42px 16px 24px;
+    padding:22px 14px 24px;
   }
 
   .hero{
-    min-height:430px;
+    min-height:275px;
     align-items:flex-end;
-    padding-bottom:20px;
+    padding-bottom:12px;
   }
 
   .script-name{
-    font-size:4.8rem;
+    font-size:3.7rem;
   }
 
   h1{
-    font-size:4.6rem;
+    font-size:3.55rem;
   }
 
   .gold-line{
-    margin:18px 0 18px;
+    margin:12px 0 12px;
   }
 
   .services{
     gap:8px 10px;
-    font-size:.95rem;
+    font-size:.78rem;
     letter-spacing:2px;
-    line-height:1.7;
+    line-height:1.55;
   }
 
   .services span:not(:last-child):after{
@@ -492,24 +460,24 @@ footer{
   }
 
   .tagline{
-    margin-top:16px;
-    font-size:1.8rem;
+    margin-top:10px;
+    font-size:1.45rem;
   }
 
   .cta{
-    min-height:88px;
-    gap:14px;
-    margin-bottom:18px;
-    padding:18px 18px;
-    border-radius:18px;
+    min-height:72px;
+    gap:12px;
+    margin-bottom:12px;
+    padding:14px 16px;
+    border-radius:16px;
   }
 
   .cta i:first-child{
-    font-size:2.55rem;
+    font-size:2.15rem;
   }
 
   .cta-title{
-    font-size:1.08rem;
+    font-size:1rem;
     letter-spacing:0;
   }
 
@@ -519,17 +487,17 @@ footer{
 
   .socials{
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    gap:10px;
   }
 
   .social{
-    min-height:102px;
-    gap:10px;
-    font-size:.9rem;
+    min-height:82px;
+    gap:7px;
+    font-size:.78rem;
   }
 
   .social i{
-    font-size:2rem;
+    font-size:1.65rem;
   }
 
   .video-panel{
@@ -557,26 +525,12 @@ footer{
     font-size:.92rem;
   }
 
-  .instagram-posts{
-    grid-template-columns:1fr;
-  }
-
-  .insta-card{
-    min-height:138px;
-  }
-
   .info{
     grid-template-columns:1fr;
   }
 
   .info-box{
-    min-height:138px;
-    border-right:0;
-    border-bottom:1px solid rgba(217,184,120,.24);
-  }
-
-  .info-box:last-child{
-    border-bottom:0;
+    min-height:auto;
   }
 }
 
@@ -659,49 +613,25 @@ footer{
       </div>
     </section>
 
-    <section>
-      <h2 class="gallery-title"><i class="fa-brands fa-instagram"></i>Instagram nastupi</h2>
-      <div class="instagram-posts" aria-label="Instagram nastupi">
-        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
-          <strong>Live nastupi</strong>
-          <span>Snimci gdje pjevam uživo</span>
-        </a>
-        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/reels/" target="_blank">
-          <strong>Reels</strong>
-          <span>Kratki momenti sa nastupa</span>
-        </a>
-        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
-          <strong>Atmosfera</strong>
-          <span>Publika, klubovi i proslave</span>
-        </a>
-      </div>
-    </section>
-
     <section class="info">
+      <a class="info-box" href="https://wa.me/491704570006?text=Pozdrav%20Adnane,%20%C5%BEelim%20rezervisati%20termin%20za%20nastup." target="_blank">
+        <div class="info-head"><i class="fa-regular fa-calendar-check"></i>Rezervacije</div>
+        <p>Za svadbe, ro&#273;endane, privatne proslave, klubove i live nastupe.</p>
+        <span class="info-action">Po&#353;alji upit <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
       <div class="info-box">
-        <i class="fa-regular fa-calendar-days"></i>
-        <span>Rezervacije za</span>
-        <strong>2026. godinu</strong>
-        <span>u toku</span>
+        <div class="info-head"><i class="fa-solid fa-location-dot"></i>Podru&#269;je</div>
+        <p>Nastupi na podru&#269;ju <strong>Njema&#269;ke, Austrije i &#352;vicarske</strong>.</p>
       </div>
       <div class="info-box">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Nastupi na podru&#269;ju</span>
-        <strong>Njema&#269;ke, Austrije</strong>
-        <span>i &#352;vicarske</span>
-      </div>
-      <div class="info-box">
-        <i class="fa-solid fa-music"></i>
-        <span>Muzika koja</span>
-        <strong>povezuje</strong>
-        <span>ljude</span>
+        <div class="info-head"><i class="fa-solid fa-music"></i>Repertoar</div>
+        <p>Muzika za veselu atmosferu, ulazak mladenaca, prvi ples i zabavu do kraja.</p>
       </div>
     </section>
 
     <footer>
       <div class="contact">
         <span><i class="fa-solid fa-phone"></i>+49 170 4570006</span>
-        <span><i class="fa-solid fa-envelope"></i>info@adnansolak.com</span>
       </div>
       <div class="footer-socials">
         <a href="https://www.instagram.com/adnan.solak.official/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
