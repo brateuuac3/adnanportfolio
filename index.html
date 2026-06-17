@@ -8,272 +8,675 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <style>
+:root{
+  --gold:#d9b878;
+  --gold-light:#f3d59a;
+  --dark:#050505;
+  --panel:rgba(10,10,12,.78);
+  --line:rgba(217,184,120,.34);
+  --muted:#c9c9c9;
+}
+
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#050505;
-  color:white;
+  background:#020203;
+  color:#fff;
+  font-family:'Poppins',sans-serif;
   overflow-x:hidden;
 }
 
-.hero{
+a{
+  color:inherit;
+}
+
+.page{
   min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.9)),
+    radial-gradient(circle at 70% 6%,rgba(217,184,120,.22),transparent 24%),
+    linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.66) 42%,rgba(0,0,0,.32) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.96) 56%,#020203 100%),
     url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/586538326_3973863399412885_7061474985701962659_n.jpg?stp=dst-jpg_tt6&cstp=mx1439x1447&ctp=s1439x1447&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WjhQ0R_A068Q7kNvwEpiAcI&_nc_oc=AdpxZW2qKpqQ1_4xWyU4XdLSN188VmN7wMFUCMeVBicVNTF5ZJ04JpjUDBjjQxHmkYw&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=H1vjq0sBIffCQAVS8o_MvQ&_nc_ss=7b2a8&oh=00_Af-lwCtICyNSu1IEP8p_LFxJbdTd28y_7oxgTNhujiDZvQ&oe=6A38A2EB');
   background-size:cover;
-  background-position:center;
+  background-position:center top;
   background-attachment:fixed;
 }
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
+.wrap{
+  width:min(100%,920px);
+  margin:0 auto;
+  padding:78px 28px 36px;
 }
 
-.profile{
-  text-align:center;
-  padding-top:35px;
+.hero{
+  min-height:610px;
+  display:flex;
+  align-items:flex-end;
+  padding-bottom:28px;
 }
 
-.profile img{
-  width:140px;
-  height:140px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid rgba(255,255,255,.16);
-  box-shadow:0 0 25px rgba(215,190,120,.5);
-  animation:pulse 4s infinite;
+.hero-content{
+  max-width:560px;
 }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 20px rgba(215,190,120,.3);}
-  50%{box-shadow:0 0 50px rgba(215,190,120,.8);}
-  100%{box-shadow:0 0 20px rgba(215,190,120,.3);}
+.script-name{
+  font-family:'Great Vibes',cursive;
+  color:var(--gold-light);
+  font-size:clamp(4rem,11vw,7.6rem);
+  line-height:.72;
+  font-weight:400;
+  text-transform:none;
+  text-shadow:0 0 24px rgba(217,184,120,.62);
 }
 
 h1{
-  font-size:3rem;
-  margin-top:18px;
-  font-weight:800;
+  font-size:clamp(4.25rem,13vw,8.3rem);
+  line-height:.82;
+  letter-spacing:0;
+  font-weight:900;
+  text-transform:uppercase;
+  text-shadow:0 12px 35px rgba(0,0,0,.75);
 }
 
-.subtitle{
-  margin-top:10px;
-  color:#d8d8d8;
-  line-height:1.8;
+.gold-line{
+  width:min(100%,510px);
+  height:1px;
+  margin:25px 0 24px;
+  background:linear-gradient(90deg,transparent,var(--gold-light),transparent);
+  position:relative;
 }
 
-.whatsapp-btn{
+.gold-line:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold-light);
+  box-shadow:0 0 20px var(--gold-light);
+  transform:translate(-50%,-50%);
+}
+
+.services{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px 15px;
+  max-width:560px;
+  color:#fff;
+  font-size:clamp(1rem,2.7vw,1.42rem);
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.services span:not(:last-child):after{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin-left:15px;
+  border-radius:50%;
+  background:var(--gold);
+  vertical-align:middle;
+}
+
+.tagline{
+  margin-top:24px;
+  font-family:'Great Vibes',cursive;
+  color:var(--gold-light);
+  font-size:2.15rem;
+  text-align:center;
+  text-shadow:0 0 18px rgba(217,184,120,.48);
+}
+
+.cta{
   display:flex;
   align-items:center;
-  justify-content:center;
-  gap:12px;
+  gap:24px;
+  width:100%;
+  min-height:118px;
+  margin:0 auto 28px;
+  padding:24px 34px;
+  border-radius:22px;
   text-decoration:none;
-  margin:32px auto 22px;
-  max-width:650px;
-  padding:22px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#d8c29a,#c9a86a);
-  color:black;
-  font-size:1.2rem;
-  font-weight:700;
-  transition:.3s;
+  color:#060606;
+  background:linear-gradient(135deg,#f6dba5 0%,#c89b55 48%,#f0c980 100%);
+  box-shadow:0 0 28px rgba(217,184,120,.45), inset 0 1px 0 rgba(255,255,255,.55);
+  border:1px solid rgba(255,232,181,.72);
 }
 
-.whatsapp-btn:hover{
-  transform:translateY(-4px);
+.cta i:first-child{
+  font-size:3.4rem;
 }
 
-.links{
+.cta-text{
+  flex:1;
+}
+
+.cta-title{
+  display:block;
+  font-size:1.65rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.cta .arrow{
+  font-size:1.9rem;
+}
+
+.socials{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.social{
+  min-height:128px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   gap:15px;
-  max-width:650px;
-  margin:auto;
-}
-
-.link{
-  display:block;
   text-decoration:none;
-  color:white;
-  padding:20px;
-  text-align:center;
-  border-radius:18px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  transition:.3s;
-  backdrop-filter:blur(8px);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  border-radius:17px;
+  background:rgba(6,7,9,.74);
+  border:1px solid rgba(217,184,120,.25);
+  box-shadow:inset 0 0 28px rgba(255,255,255,.025);
+  transition:.25s ease;
 }
 
-.link:hover{
-  transform:translateY(-3px);
-  border-color:#d8c29a;
+.social:hover{
+  transform:translateY(-4px);
+  border-color:rgba(243,213,154,.82);
 }
 
-.link i{
+.social i{
+  color:var(--gold);
+  font-size:2.35rem;
+}
+
+.video-panel{
+  margin-top:28px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+  align-items:center;
+  border-radius:20px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(0,0,0,.5);
+}
+
+.video-embed{
+  min-height:340px;
+  position:relative;
+  overflow:hidden;
+  border-radius:13px;
+  background:#000;
+  border:1px solid rgba(217,184,120,.25);
+}
+
+.video-embed iframe{
+  width:100%;
+  height:100%;
+  min-height:340px;
   display:block;
-  font-size:28px;
-  margin-bottom:10px;
+  border:0;
 }
 
-.video-section{
-  padding-top:70px;
+.panel-kicker{
+  color:var(--gold);
+  font-size:1.05rem;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:20px;
-  font-size:1.4rem;
-  color:#d8c29a;
+.panel-copy{
+  margin:18px 0 22px;
+  color:#f6f6f6;
+  font-size:1.25rem;
+  line-height:1.65;
 }
 
-.video-card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:25px;
-  padding:15px;
+.mini-line{
+  width:54px;
+  height:1px;
+  margin-bottom:30px;
+  background:var(--gold);
+}
+
+.video-button{
+  display:inline-flex;
+  align-items:center;
+  gap:13px;
+  padding:17px 26px;
+  border-radius:10px;
+  color:var(--gold-light);
+  text-decoration:none;
+  border:1px solid rgba(217,184,120,.62);
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.gallery-title{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin:35px 0 18px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:1.08rem;
+}
+
+.gallery-title i{
+  color:var(--gold);
+}
+
+.instagram-posts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.insta-card{
+  min-height:156px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  gap:8px;
+  padding:16px;
+  border-radius:11px;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(217,184,120,.22);
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.78)),
+    url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/586538326_3973863399412885_7061474985701962659_n.jpg?stp=dst-jpg_tt6&cstp=mx1439x1447&ctp=s1439x1447&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WjhQ0R_A068Q7kNvwEpiAcI&_nc_oc=AdpxZW2qKpqQ1_4xWyU4XdLSN188VmN7wMFUCMeVBicVNTF5ZJ04JpjUDBjjQxHmkYw&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=H1vjq0sBIffCQAVS8o_MvQ&_nc_ss=7b2a8&oh=00_Af-lwCtICyNSu1IEP8p_LFxJbdTd28y_7oxgTNhujiDZvQ&oe=6A38A2EB');
+  background-size:cover;
+  transition:.25s ease;
+}
+
+.insta-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(243,213,154,.75);
+}
+
+.insta-card strong{
+  color:var(--gold-light);
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.insta-card span{
+  color:#eee;
+  font-size:.92rem;
+}
+
+.insta-card:nth-child(1){background-position:left center;}
+.insta-card:nth-child(2){background-position:center top;}
+.insta-card:nth-child(3){background-position:right center;}
+
+.info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:rgba(7,8,10,.78);
   overflow:hidden;
 }
 
-.footer{
+.info-box{
+  min-height:174px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
   text-align:center;
-  margin-top:40px;
-  color:#999;
-  padding-bottom:30px;
+  padding:22px;
+  text-transform:uppercase;
+  border-right:1px solid rgba(217,184,120,.24);
 }
 
-@media(max-width:768px){
-  .hero{
+.info-box:last-child{
+  border-right:0;
+}
+
+.info-box i{
+  color:var(--gold);
+  font-size:2.6rem;
+  margin-bottom:9px;
+}
+
+.info-box strong{
+  color:var(--gold-light);
+  letter-spacing:1px;
+}
+
+footer{
+  padding:35px 0 8px;
+  color:#b8b8b8;
+  text-align:center;
+}
+
+.contact{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:24px;
+  margin-bottom:26px;
+}
+
+.contact span{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.contact i,
+.footer-socials i{
+  color:var(--gold);
+}
+
+.footer-socials{
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  margin-bottom:24px;
+  font-size:1.55rem;
+}
+
+.copyright{
+  font-size:.95rem;
+  color:#8d8d8d;
+}
+
+@media(max-width:760px){
+  .page{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.55) 32%,#020203 74%),
+      linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.2)),
+      url('https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/586538326_3973863399412885_7061474985701962659_n.jpg?stp=dst-jpg_tt6&cstp=mx1439x1447&ctp=s1439x1447&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WjhQ0R_A068Q7kNvwEpiAcI&_nc_oc=AdpxZW2qKpqQ1_4xWyU4XdLSN188VmN7wMFUCMeVBicVNTF5ZJ04JpjUDBjjQxHmkYw&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&_nc_gid=H1vjq0sBIffCQAVS8o_MvQ&_nc_ss=7b2a8&oh=00_Af-lwCtICyNSu1IEP8p_LFxJbdTd28y_7oxgTNhujiDZvQ&oe=6A38A2EB');
+    background-size:auto 640px;
+    background-position:center top;
+    background-repeat:no-repeat;
     background-attachment:scroll;
   }
 
-  .container{
-    padding:16px 16px 35px;
+  .wrap{
+    padding:42px 16px 24px;
   }
 
-  .profile{
-    padding-top:10px;
+  .hero{
+    min-height:430px;
+    align-items:flex-end;
+    padding-bottom:20px;
   }
 
-  .profile img{
-    width:92px;
-    height:92px;
+  .script-name{
+    font-size:4.8rem;
   }
 
   h1{
-    font-size:2rem;
-    margin-top:10px;
+    font-size:4.6rem;
   }
 
-  .subtitle{
-    font-size:.9rem;
-    line-height:1.45;
-    margin-top:6px;
+  .gold-line{
+    margin:18px 0 18px;
   }
 
-  .whatsapp-btn{
-    margin:20px auto 13px;
-    padding:14px;
-    border-radius:16px;
-    font-size:.98rem;
+  .services{
+    gap:8px 10px;
+    font-size:.95rem;
+    letter-spacing:2px;
+    line-height:1.7;
   }
 
-  .links{
-    gap:10px;
+  .services span:not(:last-child):after{
+    width:5px;
+    height:5px;
+    margin-left:10px;
   }
 
-  .link{
-    min-height:82px;
-    padding:13px 8px;
-    border-radius:15px;
-    font-size:.94rem;
+  .tagline{
+    margin-top:16px;
+    font-size:1.8rem;
   }
 
-  .link i{
-    font-size:23px;
-    margin-bottom:7px;
-  }
-
-  .video-section{
-    padding-top:95px;
-  }
-
-  .section-title{
-    font-size:1.15rem;
-    margin-bottom:16px;
-  }
-
-  .video-card{
+  .cta{
+    min-height:88px;
+    gap:14px;
+    margin-bottom:18px;
+    padding:18px 18px;
     border-radius:18px;
-    padding:10px;
+  }
+
+  .cta i:first-child{
+    font-size:2.55rem;
+  }
+
+  .cta-title{
+    font-size:1.08rem;
+    letter-spacing:0;
+  }
+
+  .cta .arrow{
+    font-size:1.35rem;
+  }
+
+  .socials{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .social{
+    min-height:102px;
+    gap:10px;
+    font-size:.9rem;
+  }
+
+  .social i{
+    font-size:2rem;
+  }
+
+  .video-panel{
+    margin-top:38px;
+    grid-template-columns:1fr;
+    gap:21px;
+    padding:18px;
+    border-radius:18px;
+  }
+
+  .video-embed,
+  .video-embed iframe{
+    min-height:430px;
+  }
+
+  .panel-copy{
+    font-size:1.04rem;
+  }
+
+  .video-button{
+    width:100%;
+    justify-content:center;
+    padding:15px;
+    font-size:.92rem;
+  }
+
+  .instagram-posts{
+    grid-template-columns:1fr;
+  }
+
+  .insta-card{
+    min-height:138px;
+  }
+
+  .info{
+    grid-template-columns:1fr;
+  }
+
+  .info-box{
+    min-height:138px;
+    border-right:0;
+    border-bottom:1px solid rgba(217,184,120,.24);
+  }
+
+  .info-box:last-child{
+    border-bottom:0;
+  }
+}
+
+@media(max-width:380px){
+  .script-name{
+    font-size:4.25rem;
+  }
+
+  h1{
+    font-size:4rem;
+  }
+
+  .services{
+    font-size:.83rem;
   }
 }
 </style>
 </head>
 
 <body>
-<div class="hero">
-  <div class="container">
-    <div class="profile">
-      <img src="https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/586538326_3973863399412885_7061474985701962659_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1439x1447&amp;ctp=s1439x1447&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=WjhQ0R_A068Q7kNvwEpiAcI&amp;_nc_oc=AdpxZW2qKpqQ1_4xWyU4XdLSN188VmN7wMFUCMeVBicVNTF5ZJ04JpjUDBjjQxHmkYw&amp;_nc_zt=23&amp;_nc_ht=scontent-fra5-2.xx&amp;_nc_gid=H1vjq0sBIffCQAVS8o_MvQ&amp;_nc_ss=7b2a8&amp;oh=00_Af-lwCtICyNSu1IEP8p_LFxJbdTd28y_7oxgTNhujiDZvQ&amp;oe=6A38A2EB" alt="Adnan Solak">
-      <h1>Adnan Solak</h1>
-      <div class="subtitle">Svadbe • Rodendani • Privatne proslave • Klubovi • Live nastupi</div>
-    </div>
+<main class="page">
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="script-name">Adnan</div>
+        <h1>Solak</h1>
+        <div class="gold-line"></div>
+        <div class="services">
+          <span>Svadbe</span>
+          <span>Ro&#273;endani</span>
+          <span>Privatne proslave</span>
+          <span>Klubovi</span>
+          <span>Live nastupi</span>
+        </div>
+        <div class="tagline">Music connects people</div>
+      </div>
+    </section>
 
-    <a class="whatsapp-btn" href="https://wa.me/491704570006?text=Pozdrav%20Adnane,%20zanimaju%20me%20informacije%20za%20nastup." target="_blank">
+    <a class="cta" href="https://wa.me/491704570006?text=Pozdrav%20Adnane,%20zanimaju%20me%20informacije%20za%20nastup." target="_blank">
       <i class="fa-brands fa-whatsapp"></i>
-      Rezervacije i upiti
+      <span class="cta-text">
+        <span class="cta-title">Rezervacije i upiti</span>
+      </span>
+      <i class="fa-solid fa-chevron-right arrow"></i>
     </a>
 
-    <div class="links">
-      <a class="link" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
+    <nav class="socials" aria-label="Dru&#353;tvene mre&#382;e">
+      <a class="social" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
         <i class="fa-brands fa-instagram"></i>
         Instagram
       </a>
-
-      <a class="link" href="https://www.tiktok.com/@adnan.solak.official" target="_blank">
+      <a class="social" href="https://www.tiktok.com/@adnan.solak.official" target="_blank">
         <i class="fa-brands fa-tiktok"></i>
         TikTok
       </a>
-
-      <a class="link" href="https://www.youtube.com/@adnan.solak.official" target="_blank">
+      <a class="social" href="https://www.youtube.com/@adnan.solak.official" target="_blank">
         <i class="fa-brands fa-youtube"></i>
         YouTube
       </a>
-
-      <a class="link" href="https://www.facebook.com/adnan.solakofficial/" target="_blank">
+      <a class="social" href="https://www.facebook.com/adnan.solakofficial/" target="_blank">
         <i class="fa-brands fa-facebook-f"></i>
         Facebook
       </a>
-    </div>
+    </nav>
 
-    <div class="video-section">
-      <h2 class="section-title">Pogledajte jedan od nastupa</h2>
-
-      <div class="video-card">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@adnan.solak.official/video/7649013205078920481" data-video-id="7649013205078920481" style="max-width:100%;min-width:100%;">
-          <section>
-            <a target="_blank" title="@adnan.solak.official" href="https://www.tiktok.com/@adnan.solak.official?refer=embed">@adnan.solak.official</a>
-          </section>
-        </blockquote>
+    <section class="video-panel">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/zlxKlQJcxsU" title="Adnan Solak promo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-    </div>
+      <div>
+        <div class="panel-kicker">Promo video</div>
+        <p class="panel-copy">Pogledajte kratki promo snimak i atmosferu sa nastupa.</p>
+        <div class="mini-line"></div>
+        <a class="video-button" href="https://www.youtube.com/shorts/zlxKlQJcxsU" target="_blank">
+          <i class="fa-solid fa-play"></i>
+          Pogledaj video
+        </a>
+      </div>
+    </section>
 
-    <div class="footer">&copy; 2026 Adnan Solak Official</div>
+    <section>
+      <h2 class="gallery-title"><i class="fa-brands fa-instagram"></i>Instagram nastupi</h2>
+      <div class="instagram-posts" aria-label="Instagram nastupi">
+        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
+          <strong>Live nastupi</strong>
+          <span>Snimci gdje pjevam uživo</span>
+        </a>
+        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/reels/" target="_blank">
+          <strong>Reels</strong>
+          <span>Kratki momenti sa nastupa</span>
+        </a>
+        <a class="insta-card" href="https://www.instagram.com/adnan.solak.official/" target="_blank">
+          <strong>Atmosfera</strong>
+          <span>Publika, klubovi i proslave</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="info-box">
+        <i class="fa-regular fa-calendar-days"></i>
+        <span>Rezervacije za</span>
+        <strong>2026. godinu</strong>
+        <span>u toku</span>
+      </div>
+      <div class="info-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Nastupi na podru&#269;ju</span>
+        <strong>Njema&#269;ke, Austrije</strong>
+        <span>i &#352;vicarske</span>
+      </div>
+      <div class="info-box">
+        <i class="fa-solid fa-music"></i>
+        <span>Muzika koja</span>
+        <strong>povezuje</strong>
+        <span>ljude</span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <span><i class="fa-solid fa-phone"></i>+49 170 4570006</span>
+        <span><i class="fa-solid fa-envelope"></i>info@adnansolak.com</span>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/adnan.solak.official/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@adnan.solak.official" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@adnan.solak.official" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.facebook.com/adnan.solakofficial/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <div class="copyright">&copy; 2026 Adnan Solak Official. Sva prava zadr&#382;ana.</div>
+    </footer>
   </div>
-</div>
-
-<script async src="https://www.tiktok.com/embed.js"></script>
+</main>
 </body>
 </html>
