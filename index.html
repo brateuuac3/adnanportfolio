@@ -483,11 +483,14 @@ h1{
 
 .youtube-link{
   min-height:540px;
+  width:100%;
   height:100%;
   display:grid;
   place-items:center;
   position:relative;
   color:#fff;
+  border:0;
+  cursor:pointer;
   text-decoration:none;
   background:
     linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.52)),
@@ -805,15 +808,15 @@ footer{
 
     <section class="video-panel">
       <div class="video-embed">
-        <a class="youtube-link" href="https://youtube.com/shorts/ICYuadqvBJI?si=j9vRpovjmXwLQy6T" target="_blank" aria-label="Pogledaj promo video na YouTube">
+        <button class="youtube-link" type="button" data-video="ICYuadqvBJI" aria-label="Pusti promo video">
           <span class="youtube-play"><i class="fa-solid fa-play"></i></span>
-        </a>
+        </button>
       </div>
       <div>
         <div class="panel-kicker">Promo video</div>
         <p class="panel-copy">Pogledajte kratki promo snimak i atmosferu sa nastupa.</p>
         <div class="mini-line"></div>
-        <a class="video-button" href="https://youtube.com/shorts/ICYuadqvBJI?si=j9vRpovjmXwLQy6T" target="_blank">
+        <a class="video-button play-inline" href="#promo-video" data-video="ICYuadqvBJI">
           <i class="fa-solid fa-play"></i>
           Pogledaj video
         </a>
@@ -840,6 +843,18 @@ window.addEventListener('load',function(){
     document.body.classList.remove('loading');
     document.getElementById('loader').classList.add('hidden');
   },3000);
+});
+
+function playPromoVideo(videoId){
+  var holder=document.querySelector('.video-embed');
+  holder.innerHTML='<iframe src="https://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0&playsinline=1" title="Adnan Solak promo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+}
+
+document.querySelectorAll('[data-video]').forEach(function(trigger){
+  trigger.addEventListener('click',function(event){
+    event.preventDefault();
+    playPromoVideo(trigger.getAttribute('data-video'));
+  });
 });
 </script>
 </body>
