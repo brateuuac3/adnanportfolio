@@ -234,6 +234,38 @@ h1{
   border:1px solid rgba(217,184,120,.25);
 }
 
+.youtube-link{
+  min-height:340px;
+  height:100%;
+  display:grid;
+  place-items:center;
+  position:relative;
+  color:#fff;
+  text-decoration:none;
+  background:
+    linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.52)),
+    url('https://img.youtube.com/vi/ICYuadqvBJI/maxresdefault.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.youtube-play{
+  width:86px;
+  height:86px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:3px solid var(--gold-light);
+  background:rgba(0,0,0,.46);
+  box-shadow:0 0 25px rgba(217,184,120,.42);
+}
+
+.youtube-play i{
+  margin-left:6px;
+  color:var(--gold-light);
+  font-size:2rem;
+}
+
 .video-embed iframe{
   width:100%;
   height:100%;
@@ -509,7 +541,8 @@ footer{
   }
 
   .video-embed,
-  .video-embed iframe{
+  .video-embed iframe,
+  .youtube-link{
     min-height:430px;
   }
 
@@ -611,13 +644,15 @@ footer{
 
     <section class="video-panel">
       <div class="video-embed">
-        <iframe src="https://www.youtube.com/embed/zlxKlQJcxsU" title="Adnan Solak promo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a class="youtube-link" href="https://youtube.com/shorts/ICYuadqvBJI?si=j9vRpovjmXwLQy6T" target="_blank" aria-label="Pogledaj promo video na YouTube">
+          <span class="youtube-play"><i class="fa-solid fa-play"></i></span>
+        </a>
       </div>
       <div>
         <div class="panel-kicker">Promo video</div>
         <p class="panel-copy">Pogledajte kratki promo snimak i atmosferu sa nastupa.</p>
         <div class="mini-line"></div>
-        <a class="video-button" href="https://www.youtube.com/shorts/zlxKlQJcxsU" target="_blank">
+        <a class="video-button" href="https://youtube.com/shorts/ICYuadqvBJI?si=j9vRpovjmXwLQy6T" target="_blank">
           <i class="fa-solid fa-play"></i>
           Pogledaj video
         </a>
